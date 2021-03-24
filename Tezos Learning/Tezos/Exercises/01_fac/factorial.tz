@@ -1,0 +1,8 @@
+parameter int ;
+storage (pair int int);
+code {
+        CAR @original ; DUP ; DUP ; 
+        PAIR ; DUP ; CAR @remained ; PUSH int 1 ; SWAP ; SUB ;
+        PUSH bool True ;
+        LOOP { DUP ; DIP 2 { CDR @fac } ; DIP { MUL } ; PAIR ; DUP ; CAR @remained ; PUSH int 1 ; SWAP ; SUB @mul ; DUP ; GT } ;
+        DROP ; CDR ; PAIR ; NIL operation ; PAIR };

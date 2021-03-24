@@ -73,6 +73,30 @@ https://blog.nomadic-labs.com/introducing-mockup-mode-for-tezos-client.html#the-
 
 
 
+## Indentation
+
+To remove ambiguities for human readers, the parser enforces some indentation rules.
+    
+For sequences:
+- All expressions in a sequence must be aligned on the same column.
+- An exception is made when consecutive expressions fit on the same line, as long as the first of them is correctly aligned.
+- All expressions in a sequence must be indented to the right of the opening curly brace by at least one column.
+- The closing curly brace cannot be on the left of the opening one.
+
+For primitive applications:
+- All arguments in an application must be aligned on the same column.
+- An exception is made when consecutive arguments fit on the same line, as long as the first of them is correctly aligned.
+- All arguments in a sequence must be indented to the right of the primitive name by at least one column.
+
+## Command line
+
+```
+./tezos-client --mode mockup --base-dir /tmp/mockup create mockup
+alias mockup-client='tezos-client --mode mockup --base-dir /tmp/mockup'
+mockup-client list known addresses
+```
+
+
 
 
 
