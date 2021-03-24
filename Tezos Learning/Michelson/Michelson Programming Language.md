@@ -30,7 +30,7 @@ Similarly, the restrictions imposed by the forced indentation [强制缩进] and
 
 Our current implementation of Michelson is based around an OCaml GADT, which we have used to verify the type-soundness of the language. Additionally, the implementation of a stack based language maps directly to the semantics. The same is not true for any efficient implementation of the lambda-calculus.
 
-There have also been two formally verified implementations of Michelson, one in Coq and one in F*
+There have also been two formally verified implementations of Michelson, one in Coq and one in F\*
 
 * One Main Advantage of Tezos: The system is amendable. [可修改的] ????????
 
@@ -107,7 +107,7 @@ code{
 
 ### Stack Machines
 
-The most notable difference between Michelson and EVM is that Michelson is written in a human legible text format, whereas EVM operations are represented as bytes. For example, if you look up the opcode table for the EVM you'll see that the opcode 01 takes two numbers (off the top of the stack) and adds them together. The equivalent operation in Michelson is written as ADD.
+The most notable difference between Michelson and EVM is that Michelson is written in **a human legible text format**, whereas EVM operations are represented as **bytes**. For example, if you look up the opcode table for the EVM you'll see that the opcode 01 takes two numbers (off the top of the stack) and adds them together. The equivalent operation in Michelson is written as ADD.
 
 Example: we have a stack like this
 > 20 : 7 : 13 : 45 : []
@@ -128,7 +128,7 @@ All computation with Michelson works similarly based on this process of stack mu
 
 ### Types
 
-The second major difference between Michelson and EVM, is that Michelson data elements are typed.
+The second major difference between Michelson and EVM, is that Michelson data elements are **typed**.
 Broadly speaking, a type is a piece of information that constrains the possible things that can be done with a given data value. If the value 1 has the type int (for integer), then we know that we can safely perform numerical addition on it, but that we can't safely perform list indexing.
 For the value "foobar" with type string, the situation is reversed. Adding a number to a string 1 + "foobar" is not well-defined, because **addition is an operation on integers (in most languages, some languages overload the + operator to mean numerical addition when its arguments are numbers and concatenation when its arguments are strings)** 
 
@@ -140,14 +140,9 @@ Okay, now that we've covered a little bit of the theory of how Michelson works, 
 
 ### Installing the Tezos 
 
-
-
 ### Hello Tezos
 
 Open up your favorite editor and write the following program helloTezos.tz in the same directory you put the babylonnet.sh script.
-
-
-
 
 ## How to use Tezos
 
@@ -167,16 +162,9 @@ After a successful compilation, you should have the following binaries:
 
 The daemons are suffixed with the name of the protocol they are bound to. For instance, tezos-baker-006-PsCARTHA is the baker for the Carthage protocol. See also the Node Protocol section below.
 
+### Note
 
-
-
-
-
-
-
-
-
-
+To see more details about how to use Tezos node, go to the path of /Tezos\ Learning/Tezos
 
 ## Thanks
 
