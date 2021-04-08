@@ -1,0 +1,15 @@
+; See src/bin_optimization/dune to understand in detail how this file
+; compile the michelson optimization method
+
+(executable
+ (name test_parser)
+ (public_name tezos-opt)
+ (package tezos-opt)
+ (libraries tezos-base
+            tezos-micheline
+            tezos-protocol-alpha
+            tezos-client-alpha)
+ (flags (:standard -open Tezos_base__TzPervasives
+                   -open Tezos_micheline
+                   -open Tezos_client_alpha
+                   -open Tezos_protocol_alpha)))
