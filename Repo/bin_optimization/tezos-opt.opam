@@ -10,10 +10,14 @@ depends: [
   "tezos-base"
   "tezos-micheline"
   "tezos-protocol-alpha"
-  "tezos-client-alpha"
+  "tezos-client-base"
+  "tezos-protocol-environment"
+  "tezos-protocol-alpha-parameters"
+  "tezos-alpha-test-helpers"
+  "tezos-stdlib-unix"
+  "alcotest-lwt" { with-test & >= "1.1.0" }
 ]
 build: [
   ["dune" "build" "-p" name "-j" jobs]
-  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 synopsis: "Tezos: `tezos-opt` binary"
