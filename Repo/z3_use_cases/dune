@@ -1,0 +1,44 @@
+;; See src/bin_optimization/dune to understand in detail how this file
+;; compile the michelson optimization method
+
+(executables
+ (names main parse_parameters_storage rewriting_rules tree sk_util enc_instructions stack_util)
+;; (public_names tezos-opt)
+;; (package tezos-opt)
+ (libraries tezos-base
+            tezos-stdlib-unix
+            tezos-micheline
+            tezos-micheline-rewriting
+	    tezos-client-base
+            tezos-protocol-alpha
+            alcotest-lwt
+            tezos-protocol-environment
+            tezos-protocol-alpha-parameters
+            tezos-benchmark
+            tezos-protocol-benchmarks-alpha
+            tezos-benchmark-alpha
+            tezos-benchmark-type-inference
+            tezos-alpha-test-helpers
+            mkjson
+            core
+            z3
+            heuristic_utils
+            ppx_deriving.std
+            )
+ (flags (:standard -open Tezos_base__TzPervasives
+                   -open Tezos_micheline
+                   -open Result
+                   -open Tezos_base
+                   -open Tezos_crypto
+                   -open Tezos_stdlib
+                   -open Tezos_protocol_alpha
+                   -open Tezos_client_alpha
+                   -open Tezos_protocol_environment_alpha
+                   -open Tezos_protocol_benchmarks_alpha
+                   -open Tezos_stdlib_unix
+                   -open Tezos_benchmark_alpha
+                   -open Tezos_benchmark_type_inference
+                   -open Error_monad
+                   -open Tezos_alpha_test_helpers))
+ (preprocess (pps ppx_deriving.std ppx_deriving_yojson sedlex.ppx))
+)
