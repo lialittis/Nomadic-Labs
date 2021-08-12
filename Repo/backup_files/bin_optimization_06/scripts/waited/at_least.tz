@@ -1,0 +1,6 @@
+parameter unit;
+storage mutez;
+code {CDR; DUP;
+      AMOUNT; CMPLT;
+      IF {FAIL}
+         {NIL operation;PAIR}}

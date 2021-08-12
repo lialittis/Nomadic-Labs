@@ -1,0 +1,4 @@
+(executable
+ (name test_heuristic)
+ (libraries heuristic_utils)
+)

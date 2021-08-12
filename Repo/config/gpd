@@ -1,0 +1,14 @@
+sec   rsa4096/B67685DFBF622B9E 2021-04-09 [SC]
+      C0259E5C4FB12D474CA650FFB67685DFBF622B9E
+uid                [  ultime ] Tianchi YU <yu-tianchi@outlook.com>
+ssb   rsa4096/73796048F6AC718C 2021-04-09 [E]
+
+gpg: vérification de la base de confiance
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: profondeur : 0  valables :   2  signées :   0
+     confiance : 0 i., 0 n.d., 0 j., 0 m., 0 t., 2 u.
+sec   rsa4096/58F8591B335F3426 2021-04-09 [SC]
+      1FBDE201E7942EBB11EBA60F58F8591B335F3426
+uid                [  ultime ] Tianchi YU <tianchi.yu@student.isae-supaero.fr>
+ssb   rsa4096/46115B91CA252CCF 2021-04-09 [E]
+

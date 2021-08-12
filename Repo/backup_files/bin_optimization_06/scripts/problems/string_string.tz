@@ -1,0 +1,3 @@
+storage string;
+parameter string;
+code { PUSH string "bruit" ; DUP ; PAIR ; PUSH int 100 ; PUSH int 200 ; ADD ; DUP ; DIP { DROP } ; SWAP ; SWAP ; DROP ; DROP ; DROP ; PUSH string "hello world" ; NIL operation ; PAIR }

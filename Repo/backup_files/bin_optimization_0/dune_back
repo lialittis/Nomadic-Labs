@@ -1,0 +1,35 @@
+;; See src/bin_optimization/dune to understand in detail how this file
+;; compile the michelson optimization method
+
+(executable
+ (name main)
+ (public_name tezos-opt)
+ (package tezos-opt)
+ (libraries tezos-base
+ 			tezos-stdlib-unix
+            tezos-micheline
+            tezos-protocol-alpha
+            tezos-client-alpha
+			tezos-rpc
+			tezos-protocol-alpha-parameters
+			tezos-shell-services
+			tezos-signer-backends
+			alcotest-lwt
+			tezos-protocol-environment
+			tezos-alpha-test-helpers)
+ (flags (:standard -open Tezos_base__TzPervasives
+                   -open Tezos_micheline
+                   -open Tezos_client_alpha
+                   -open Tezos_protocol_alpha
+				   -open Tezos_shell_services
+                   -open Tezos_protocol_alpha_parameters
+				   -open Tezos_protocol_environment_alpha
+				   -open Tezos_stdlib_unix
+                   -open Tezos_rpc
+				   -open Error_monad
+				   -open Tezos_alpha_test_helpers)))
+
+;;(rule
+;; (alias runtest)
+;; (deps (glob_files *.ml{,i}))
+;; (action (run %{lib:tezos-tooling:lint.sh} %{deps})))

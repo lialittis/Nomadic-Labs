@@ -1,0 +1,33 @@
+parameter bytes;
+storage unit;
+code {
+       CAR @preimage;
+       DIP {
+             PUSH @from key_hash "tz1KqTpEZ7Yob7QbPE4Hy4Wo8fHG8LhKxZSx";
+             IMPLICIT_ACCOUNT ;
+             PUSH @to   key_hash "tz1gjaF81ZRRvdzjobyfVNsAeSC6PScjfQwN";
+             IMPLICIT_ACCOUNT ;
+             PUSH @target_hash bytes 0x123456;
+             PUSH @deadline timestamp "2018-08-08 00:00:00Z";
+           };
+       SWAP; SWAP ; SWAP ;NOW;
+       IFCMPLT
+         {
+           DROP; DROP; DROP; BALANCE; UNIT; TRANSFER_TOKENS;
+         }
+         {
+           DUP; SIZE;
+           PUSH @max_length nat 32;
+           IFCMPLT
+             { PUSH string "preimage too long"; FAILWITH; }
+             {
+               SHA256 @candidate_hash;
+               IFCMPNEQ
+                 { PUSH string "invalid preimage"; FAILWITH; }
+                 {
+                   BALANCE; UNIT; TRANSFER_TOKENS; DIP { DROP };
+                 };
+             };
+         };
+       NIL operation; SWAP; CONS;
+       UNIT; SWAP; PAIR}

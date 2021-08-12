@@ -1,0 +1,7 @@
+(library
+ (name heuristic_utils)
+ (libraries core
+            mkjson
+            tezos-base
+            )
+)

@@ -1,0 +1,7 @@
+parameter (contract (lambda unit address));
+storage unit;
+code {
+       CAR;
+       BALANCE;
+       UNIT; NIL operation;
+       PAIR}

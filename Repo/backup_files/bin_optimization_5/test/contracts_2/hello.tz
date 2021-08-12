@@ -1,0 +1,13 @@
+parameter unit;
+storage unit;
+code {
+    DUP ;
+    CAR ;
+    SWAP ;
+    CDR ;
+    PUSH string "world" ;
+    SWAP ;
+    CONCAT ;
+    DIP { DROP } ;
+    NIL operation ;
+    PAIR}

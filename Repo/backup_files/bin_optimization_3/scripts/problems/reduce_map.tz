@@ -1,0 +1,15 @@
+parameter (pair (lambda int int) (list int));
+storage (list int);
+code { DIP{NIL int};
+       CAR;
+       DUP;
+       DIP{CAR; PAIR};
+       CDR;
+       ITER {PAIR;
+             DUP; CDAR;
+             DIP{ DUP; DIP{CDAR}; DUP;
+                  CAR; DIP{CDDR; SWAP}; EXEC; CONS};
+             PAIR};
+       CDR; DIP{NIL int};
+       ITER {CONS};
+       NIL operation; PAIR}

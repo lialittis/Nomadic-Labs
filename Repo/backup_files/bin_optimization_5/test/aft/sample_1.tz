@@ -1,0 +1,412 @@
+{ { CDR ;
+    { { SWAP ;
+        { { PUSH int 100 ; PUSH int 100 } ;
+          { DROP 5 ; PUSH unit Unit ; PUSH unit Unit ; PUSH unit Unit } } } ;
+      { COMPARE ;
+        { { { { { PUSH int 100 ;
+                  { { DROP 3 ;
+                      PUSH unit Unit ;
+                      PUSH bytes 0x72c3acb2de5b10e00c4bb0eb701f3233e48e ;
+                      PUSH (or unit unit) (Left Unit) } ;
+                    { DIP { SIZE } ;
+                      { { NIL unit ;
+                          DIP { LOOP_LEFT
+                                  { { DROP 3 ;
+                                      PUSH unit Unit ;
+                                      PUSH nat 33562889780988319311796411201952261282777395669106767981924299 ;
+                                      PUSH (or unit unit) (Right Unit) } } } } ;
+                        { { { { DROP 4 ; PUSH unit Unit } ;
+                              { DROP 1 ; PUSH unit Unit ; PUSH (map unit unit) {} } } ;
+                            ITER { { DROP 2 ; PUSH unit Unit } } } ;
+                          { DROP 1 ;
+                            PUSH unit Unit ;
+                            PUSH (map bool unit) {} ;
+                            PUSH (option unit) (Some Unit) ;
+                            PUSH bool False ;
+                            PUSH (option (or bool unit)) (Some (Left True)) ;
+                            PUSH bool False ;
+                            PUSH (list bool) {} } } } } } } ;
+                { DIP { LOOP { IF_NONE
+                                 { { UPDATE ;
+                                     { DROP 2 ;
+                                       PUSH unit Unit ;
+                                       PUSH (map bool unit) {} ;
+                                       PUSH (option unit) None ;
+                                       PUSH bool True ;
+                                       PUSH (option (or bool unit)) (Some (Right Unit)) ;
+                                       PUSH bool True } } }
+                                 { { DROP 5 ;
+                                     PUSH unit Unit ;
+                                     PUSH (map bool unit) {} ;
+                                     PUSH (option unit) None ;
+                                     PUSH bool True ;
+                                     PUSH (option (or bool unit)) (Some (Right Unit)) ;
+                                     PUSH bool True } } } } ;
+                  ITER { { IF { IF_NONE
+                                  { { { DROP 4 ; PUSH unit Unit } ;
+                                      { DROP 1 ;
+                                        PUSH unit Unit ;
+                                        PUSH (map bool unit) {} ;
+                                        PUSH (option unit) None ;
+                                        PUSH bool True ;
+                                        PUSH (or unit (option (or bool unit))) (Right (Some (Right Unit))) } } }
+                                  { { DROP 5 ;
+                                      PUSH unit Unit ;
+                                      PUSH (map bool unit) {} ;
+                                      PUSH (option unit) (Some Unit) ;
+                                      PUSH bool False ;
+                                      PUSH (or unit (option (or bool unit))) (Left Unit) } } }
+                              { { DROP 5 ;
+                                  PUSH unit Unit ;
+                                  PUSH (map bool unit) {} ;
+                                  PUSH (option unit) (Some Unit) ;
+                                  PUSH bool True ;
+                                  PUSH (or unit (option (or bool unit))) (Left Unit) } } ;
+                           LOOP_LEFT
+                             { { DROP 5 ;
+                                 PUSH unit Unit ;
+                                 PUSH (map bool unit) {} ;
+                                 PUSH (option unit) None ;
+                                 PUSH bool False ;
+                                 PUSH (or unit (option (or bool unit))) (Left Unit) } } } } } } ;
+              { { { { { { { LEFT unit ;
+                            { IF_LEFT
+                                { IF_NONE
+                                    { { DROP 4 ;
+                                        PUSH unit Unit ;
+                                        PUSH int -118489764288659155717350536254313304583839395230042956853851560 ;
+                                        PUSH int 1210666735880770212059083296887419849358919400635788883082658 ;
+                                        PUSH (list bytes) {} ;
+                                        PUSH bool False ;
+                                        PUSH bool False ;
+                                        PUSH bool True ;
+                                        PUSH bool True ;
+                                        PUSH bool False } }
+                                    { IF_LEFT
+                                        { IF { { DROP 4 ;
+                                                 PUSH unit Unit ;
+                                                 PUSH int 1354939793545764821473198752169438505825829342576259290539 ;
+                                                 PUSH int
+                                                      -44150575350270343355502352811032819707260250329604185798450954141531539716 ;
+                                                 PUSH (list bytes) {} ;
+                                                 PUSH bool True ;
+                                                 PUSH bool False ;
+                                                 PUSH bool True ;
+                                                 PUSH bool True ;
+                                                 PUSH bool True } }
+                                             { DIP { { DROP 3 ;
+                                                       PUSH unit Unit ;
+                                                       PUSH int -29909709255996112534927871202 ;
+                                                       PUSH int
+                                                            -307015176329555906928651640150364419428410933603228636240704329604763117827 ;
+                                                       PUSH (list bytes) {} ;
+                                                       PUSH bool True ;
+                                                       PUSH bool True ;
+                                                       PUSH bool False ;
+                                                       PUSH bool True } } } }
+                                        { { DROP 5 ;
+                                            PUSH unit Unit ;
+                                            PUSH int 268093056165763444418398449533648819996339170589122 ;
+                                            PUSH int 392278519160787201440953227488687605392847745770909753024 ;
+                                            PUSH (list bytes) {} ;
+                                            PUSH bool True ;
+                                            PUSH bool False ;
+                                            PUSH bool False ;
+                                            PUSH bool True ;
+                                            PUSH bool False } } } }
+                                { { DROP 5 ;
+                                    PUSH unit Unit ;
+                                    PUSH int -15745746157197269247058921483799633147595733733903486491 ;
+                                    PUSH int 12135480400272497848325078773962 ;
+                                    PUSH (list bytes) {} ;
+                                    PUSH bool False ;
+                                    PUSH bool False ;
+                                    PUSH bool False ;
+                                    PUSH bool False ;
+                                    PUSH bool False } } ;
+                              IF { { { DIP { { { DROP 7 ;
+                                                 PUSH unit Unit ;
+                                                 PUSH (set unit) {} ;
+                                                 PUSH bool True ;
+                                                 PUSH unit Unit } ;
+                                               UPDATE } } ;
+                                       { DROP 3 ;
+                                         PUSH unit Unit ;
+                                         PUSH int -2607494497456044318331583796704491 ;
+                                         PUSH int 5763600544392833146243283553057684560959043048289359545859011278372597 ;
+                                         PUSH (list bytes) {} ;
+                                         PUSH bool True ;
+                                         PUSH bool True ;
+                                         PUSH bool False ;
+                                         PUSH bool False ;
+                                         PUSH unit Unit } } ;
+                                     DROP } }
+                                 { SWAP } } } ;
+                          IF { DIP { { DROP 6 ;
+                                       PUSH unit Unit ;
+                                       PUSH int -743616822138845345361 ;
+                                       PUSH int -15080513212902995859739294916873 ;
+                                       PUSH (list bytes) {} ;
+                                       PUSH bool False } } }
+                             { LOOP { { { DROP 6 ;
+                                          PUSH unit Unit ;
+                                          PUSH int 17291359547151963162278790106817088513751677 ;
+                                          PUSH int
+                                               23407776697771304641653057834099598919798010475291736941903276652613944758832 ;
+                                          PUSH (list bytes) {} ;
+                                          PUSH bool False ;
+                                          PUSH bool False ;
+                                          PUSH bool False ;
+                                          PUSH bool True } ;
+                                        DIP { LOOP { { SWAP ;
+                                                       DIP { { DROP 5 ;
+                                                               PUSH unit Unit ;
+                                                               PUSH int
+                                                                    28108610700200387481723252154451464385359375862959397542017274925246489551304 ;
+                                                               PUSH int -20251961296429380817475996400247767680043760143730505046 ;
+                                                               PUSH (list bytes) {} ;
+                                                               PUSH bool False ;
+                                                               PUSH bool False } } } } } } } } } ;
+                        { { LOOP { IF { { DROP ;
+                                          { DROP 3 ;
+                                            PUSH unit Unit ;
+                                            PUSH int -2235291692758197148643146453392361648872361333003802276151 ;
+                                            PUSH int -15305399680946782705397314957817676632648954736393922080077634002 ;
+                                            PUSH (list bytes) {} ;
+                                            PUSH bool False ;
+                                            PUSH bool False } } }
+                                      { { DROP 4 ;
+                                          PUSH unit Unit ;
+                                          PUSH int 95973115291687403173121379335364360357916610725742453395227949154 ;
+                                          PUSH int 7451459317533532541650222691102 ;
+                                          PUSH (list bytes) {} ;
+                                          PUSH bool True ;
+                                          PUSH bool False } } } ;
+                            PACK } ;
+                          SHA256 } } ;
+                      { { { CONS ; ITER { DROP } } ; MUL } ;
+                        { DROP 2 ;
+                          PUSH unit Unit ;
+                          PUSH (list (or nat unit)) {} ;
+                          PUSH (set unit) {} ;
+                          PUSH int 65214910402009690159511470981699660155689473018354177 ;
+                          PUSH (option (option bool)) (Some (Some True)) } } } ;
+                    IF_NONE
+                      { GT }
+                      { { RIGHT (option bool) ;
+                          { LOOP_LEFT { RIGHT (option bool) } ;
+                            IF_NONE
+                              { { DROP 4 ;
+                                  PUSH unit Unit ;
+                                  PUSH (list (or nat unit)) {} ;
+                                  PUSH (set unit) {} ;
+                                  PUSH bool False } }
+                              { IF { GT }
+                                   { { DROP 4 ;
+                                       PUSH unit Unit ;
+                                       PUSH (list (or nat unit)) {} ;
+                                       PUSH (set unit) {} ;
+                                       PUSH bool False } } } } } } } ;
+                  PUSH int 100 } ;
+                { { DUP ; MUL } ;
+                  { { LEFT unit ;
+                      { { DROP ;
+                          IF { LAMBDA (list (pair unit unit)) (list unit) { MAP { CDR } } }
+                             { { SIZE ;
+                                 { { EMPTY_MAP unit unit ;
+                                     { DROP ; { LEFT unit ; EMPTY_MAP unit unit } } } ;
+                                   { DIP { CONS } ;
+                                     { DROP 3 ;
+                                       PUSH unit Unit ;
+                                       PUSH (list (or nat unit)) {} ;
+                                       PUSH (set unit) {} ;
+                                       LAMBDA (list (pair unit unit)) (list unit) { DROP 1 ; PUSH (list unit) {} } } } } } } } ;
+                        PUSH int 100 } } ;
+                    { { PUSH int 100 ; GT } ; PACK } } } } } ;
+            PUSH int 100 } ;
+          { { { { { { ABS ; EMPTY_MAP unit unit } ;
+                    { EMPTY_MAP unit unit ;
+                      { DUP ;
+                        { { PACK ;
+                            { DROP 10 ;
+                              PUSH unit Unit ;
+                              PUSH bytes
+                                   0x09a66a1a064acb40a9976eea064fb833bd3864bdfbf70abcdaa1c106182cff4ee5df7c83e11fb89c88632fbe29bf26db4761633355d477f45d33213773c6a59c67e667ee675ccf32869b681eb2408b221432346ff66553410991b861d04628fe6099ab9dff0705cd0b ;
+                              PUSH (map unit unit) {} ;
+                              PUSH bool True ;
+                              PUSH (set (option bool)) {} ;
+                              PUSH bool True ;
+                              PUSH bool True ;
+                              PUSH bool True ;
+                              PUSH (or unit (map unit unit)) (Left Unit) ;
+                              PUSH bool True ;
+                              PUSH int 4372440627241133466234 ;
+                              PUSH int
+                                   207448491979288057195149169902599821863595433284354486118367182712766299362 ;
+                              PUSH (pair int unit)
+                                   (Pair -173669600835654770443669685670780086457193806020890746439528499 Unit) } } ;
+                          CAR } } } } ;
+                  MUL } ;
+                ADD } ;
+              { GT ;
+                DIP { LOOP { { { DROP 9 ;
+                                 PUSH unit Unit ;
+                                 PUSH bytes
+                                      0x64675c9a654000dd78882f554a8f0722f2371db0b156a4f01b146d71fd6158b280e040cf03441571f2c60acb7d0f3ccb53e9efbd5a8b07917fc50975ac6684e06e ;
+                                 PUSH (map unit unit) {} ;
+                                 PUSH bool True ;
+                                 PUSH (set (option bool)) {} ;
+                                 PUSH bool True ;
+                                 PUSH bool True ;
+                                 PUSH bool True ;
+                                 PUSH (or unit (map unit unit)) (Right {}) ;
+                                 PUSH (set unit) {} ;
+                                 PUSH unit Unit } ;
+                               MEM } } } } } ;
+            IF { LOOP_LEFT { LEFT (map unit unit) } }
+               { { IF_LEFT
+                     { { DROP 9 ; PUSH unit Unit } }
+                     { { DROP 9 ; PUSH unit Unit } } ;
+                   { DROP 1 ;
+                     PUSH unit Unit ;
+                     PUSH bytes 0xaddee90e852057ecb053eb5f3858094a ;
+                     PUSH (map unit unit) {} ;
+                     PUSH bool True ;
+                     PUSH (set (option bool)) {} ;
+                     PUSH bool False ;
+                     PUSH bool False ;
+                     PUSH bool True ;
+                     PUSH (map unit unit) {} } } } } } } } } ;
+  { { { { { { ITER { DROP } ;
+              LOOP { { DROP 7 ;
+                       PUSH unit Unit ;
+                       PUSH bytes 0xc9bb9951513b2d23503bceb641 ;
+                       PUSH (map unit unit) {} ;
+                       PUSH bool True ;
+                       PUSH (set (option bool)) {} ;
+                       PUSH bool False ;
+                       PUSH bool False ;
+                       PUSH bool True } } } ;
+            IF { SWAP }
+               { IF { { DROP 5 ;
+                        PUSH unit Unit ;
+                        PUSH bytes
+                             0xb179bcf268263cccb0b6d80f2ebb4d1b90b604223340b58c94cc6f95dcbe030d88093d6dc9800273 ;
+                        PUSH (map unit unit) {} ;
+                        PUSH bool True ;
+                        PUSH bool False ;
+                        PUSH (set (option bool)) {} } }
+                    { { DROP 5 ;
+                        PUSH unit Unit ;
+                        PUSH bytes
+                             0x71ef8c5ad2e0d6d78f392065522d177c47eb35d729ad1589f9245675ea046b9122dcfb556b983a200dd27b70c32cb5b3b9d2ea910886e55a05d6c4afe74462b3fd32bcc7c3508658c5ac3de9cfc54fb50b46f2008d ;
+                        PUSH (map unit unit) {} ;
+                        PUSH bool True ;
+                        PUSH bool True ;
+                        PUSH (set (option bool)) {} } } } } ;
+          { { { ITER { IF_NONE
+                         { { { { DROP 5 ;
+                                 PUSH unit Unit ;
+                                 PUSH bytes
+                                      0x96b5014fca8ad609082839898130157e7f1e83e35547011407c0a56ea457ef7fe8b62591cd715ee1d85a8544f1612e937175f1e9 ;
+                                 PUSH (map unit unit) {} ;
+                                 PUSH bool True ;
+                                 PUSH (set unit) {} ;
+                                 PUSH (map unit unit) {} ;
+                                 PUSH (or (option (option unit)) unit) (Right Unit) } ;
+                               IF_LEFT
+                                 { IF_NONE
+                                     { { SIZE ;
+                                         { DIP { LAMBDA bytes (option unit) { UNPACK unit } } ;
+                                           { { DROP 7 ;
+                                               PUSH unit Unit ;
+                                               PUSH bytes
+                                                    0x8c61b5b367ddb69ef6df52145d9d6c433a73082f40a84bb27b40ad57332a27035f62f106af35fbd8a49caeb6 ;
+                                               PUSH (map unit unit) {} ;
+                                               PUSH bool False ;
+                                               PUSH (set unit) {} ;
+                                               PUSH (pair (option unit) unit) (Pair (Some Unit) Unit) } ;
+                                             CAR } } } }
+                                     { DIP { ITER { { DROP 6 ;
+                                                      PUSH unit Unit ;
+                                                      PUSH bytes 0x6fc9df7d153d321bf707a16c10 ;
+                                                      PUSH (map unit unit) {} ;
+                                                      PUSH bool True ;
+                                                      PUSH (set unit) {} } } } } }
+                                 { GET } } ;
+                             IF_NONE
+                               { { DROP 5 ;
+                                   PUSH unit Unit ;
+                                   PUSH bytes 0x834a253312fbcb6e34c507c5dfe9a2c38350c9d27f5f3c ;
+                                   PUSH (map unit unit) {} ;
+                                   PUSH bool False ;
+                                   PUSH bool True } }
+                               { MEM } } }
+                         { LOOP { { { DROP 5 ; PUSH unit Unit } ;
+                                    { DROP 1 ;
+                                      PUSH unit Unit ;
+                                      PUSH bytes
+                                           0x07b6b6137c22e3d0c8b44d64a196d042e716cde07b5c76498fef28069548f62bbdb0f1eb56b6ee9a7e3b2362192107c390150ea7615e1a8faee50a0a7ef4f382554065f94eaef47249fe4a84727506190033afeabd0dc450a106eac099ef21cd71a45f64e1f633d7195e3ad2ba1c9ba030bbf63203a9dfec ;
+                                      PUSH (map unit unit) {} ;
+                                      PUSH bool True ;
+                                      PUSH bool False ;
+                                      PUSH bool False } } } } } ;
+                { LOOP { DUP } ; { DROP ; ITER { DROP } } } } ;
+              { SIZE ;
+                { { DROP 2 ;
+                    PUSH unit Unit ;
+                    PUSH (pair unit (or (option (or unit (or unit unit))) unit)) (Pair Unit (Right Unit)) ;
+                    PUSH int -740182343805675945084412 ;
+                    PUSH int 63486952347453303441295349527 ;
+                    PUSH (set unit) {} ;
+                    PUSH unit Unit ;
+                    PUSH int
+                         -101058236724913315411104843492007340193426414447500140152340751328059367872338 ;
+                    PUSH int -294585472774883942693303596940083576655 ;
+                    PUSH int -10553704501030235892444649777391001362822 ;
+                    PUSH int 5057752743708091438976578107363820 ;
+                    PUSH int -1580086480261902820686825993499521671265380 ;
+                    PUSH (list nat) {} ;
+                    PUSH string
+                         "Y\\175\\229\\155\\0115\\188\\144\\166\\255Na=\\244,\\153\\233\\198i8c\\254\\212\\205\\241\\017\\146\\144\\017\\180\\192\\251\\243Z\\144\\000d\\147\\168\\252*!\\001A}\\206\\201\\165\\184\\149O\\r\\194\\195\\0303\\202\\142 +\\222`\\131\\161H\\234c\\153\\132\\224\\133%\\250es\\250\\188\\155{\\159\\161\\232\\168\\225\\127\\252-\\172\\222\\176@V\\2385\\142p\\030\\128\\217\\238\\185]\\225\\182\\003\\196\\t" } ;
+                  { { { SIZE ; { { CONS ; DROP } ; { ADD ; MUL } } } ; MUL } ;
+                    { { ADD ; DROP } ; MEM } } } } } ;
+            { LOOP { { DROP 4 ;
+                       PUSH unit Unit ;
+                       PUSH (pair unit (or (option (or unit (or unit unit))) unit)) (Pair Unit (Right Unit)) ;
+                       PUSH int -258092270162082368390512790 ;
+                       PUSH int 10781048626017951419 ;
+                       PUSH bool True } } ;
+              { PUSH int 100 ;
+                { { GT ;
+                    { IF { COMPARE }
+                         { DIP { { DROP 3 ;
+                                   PUSH unit Unit ;
+                                   PUSH (pair unit (or (option (or unit (or unit unit))) unit))
+                                        (Pair Unit (Left (Some (Left Unit)))) } } } ;
+                      SWAP } } ;
+                  CDR } } } } } ;
+        LOOP_LEFT
+          { IF_NONE
+              { { DROP 2 ;
+                  PUSH unit Unit ;
+                  PUSH int
+                       270619522421203805006540486158256524181356072762662665993795771580429392458 ;
+                  PUSH (or (option (or unit (or unit unit))) unit) (Left (Some (Left Unit))) } }
+              { IF_LEFT
+                  { { DROP 3 ;
+                      PUSH unit Unit ;
+                      PUSH int
+                           -673317285894137946119435263421051960127078567639594442668140860164230574 ;
+                      PUSH (or (option (or unit (or unit unit))) unit) (Right Unit) } }
+                  { IF_LEFT
+                      { { DROP 3 ;
+                          PUSH unit Unit ;
+                          PUSH int -8915878875495293815711253612947618873738962820778467947 ;
+                          PUSH (or (option (or unit (or unit unit))) unit) (Right Unit) } }
+                      { { DROP 3 ;
+                          PUSH unit Unit ;
+                          PUSH int -398239377948698804477185324184835301 ;
+                          PUSH (or (option (or unit (or unit unit))) unit) (Left None) } } } } } } ;
+      PUSH int 100 } ;
+    RIGHT unit } }

@@ -1,0 +1,26 @@
+{
+  "input": {
+    "parameter": "Unit",
+    "storage_i": "0x75c6ee8ad1a7608302c1abd746"
+  },
+  "output": { "storage_o": "Unit" }
+}
+{
+  "input": { "parameter": "Unit", "storage_i": "0x4aef5f38e0f9c9bc" },
+  "output": { "storage_o": "Unit" }
+}
+{
+  "input": { "parameter": "Unit", "storage_i": "0xd51861a239c25e6a" },
+  "output": { "storage_o": "Unit" }
+}
+{
+  "input": {
+    "parameter": "Unit",
+    "storage_i": "0x988b081ec5a33a0ea4987fb6a2e912be"
+  },
+  "output": { "storage_o": "Unit" }
+}
+{
+  "input": { "parameter": "Unit", "storage_i": "0x8ab9c938aa54863b84" },
+  "output": { "storage_o": "Unit" }
+}

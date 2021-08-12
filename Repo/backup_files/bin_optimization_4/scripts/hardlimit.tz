@@ -1,0 +1,4 @@
+parameter unit ;
+storage int ;
+code { CDR ; DUP ; PUSH int 0 ; CMPLT; PUSH int -1 ; DROP ; DROP ; DROP ; PUSH int 1 ;
+       NIL operation ; PAIR} ;

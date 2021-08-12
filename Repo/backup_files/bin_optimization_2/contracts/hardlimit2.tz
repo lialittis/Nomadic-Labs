@@ -1,0 +1,1 @@
+{parameter unit ; storage int ; code { CDR ; DUP ; PUSH int 0 ; CMPLT; IF {PUSH int -1 ; ADD} {FAIL}; NIL operation ; PAIR}}

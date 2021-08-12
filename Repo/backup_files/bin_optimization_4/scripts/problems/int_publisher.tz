@@ -1,0 +1,12 @@
+parameter (option (pair signature int));
+storage (pair key int);
+code {DUP; DUP; CAR;
+      IF_NONE {PUSH mutez 1000000;
+               AMOUNT; CMPLE; IF {FAIL} {};
+               CDR; DIP {CDDR}}
+              {DUP; DIP{SWAP}; SWAP; CDAR;
+               DIP {DUP; CAR; DIP {CDR; PACK ; BLAKE2B}};
+               CHECK_SIGNATURE;
+               IF {CDR; SWAP; DIP{DUP}; CDAR; PAIR}
+                  {DROP; DUP; CDR; DIP{CDDR}}};
+      DIP{DROP}; NIL operation; PAIR}

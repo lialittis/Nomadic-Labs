@@ -1,0 +1,67 @@
+parameter (or
+             (pair %fund
+                (address %dest)
+                (pair %settings (bytes %target_hash) (timestamp %deadline)))
+
+             (or %claim_refund
+                (bytes %preimage_claim)
+                (bytes %refund_hash)));
+
+storage (pair
+           (big_map
+              bytes
+              (pair
+                 (pair %recipients (address %from) (address %dest))
+                 (pair %settings (mutez %amount) (timestamp %deadline)))
+           )
+           unit);
+
+code {
+       NIL @operations operation; SWAP;
+       UNPAPAIR @% @% @%; DIP {DUP};
+       IF_LEFT
+         {
+           UNPAIR @% @%;
+           DUP; CONTRACT @dest unit; ASSERT_SOME; DROP;
+           SWAP; UNPAIR @% @%;
+           DIP
+             {
+               AMOUNT @amount;
+               SENDER;
+               DUP; CONTRACT @from unit; ASSERT_SOME; DROP;
+               DIP { PAIR; SWAP; }; PAIR; PAIR; SOME @xcat;
+               SWAP;
+             };
+           DUP; DIP { MEM; NOT; ASSERT };
+           UPDATE; PAIR @new_storage; SWAP; PAIR;
+         }
+         {
+           IF_LEFT
+             {
+               DUP; SIZE; PUSH nat 32; ASSERT_CMPGE;
+               SHA256 @hash; DUP; DIP {SWAP};
+               DIIP {
+                      GET; ASSERT_SOME;
+                      DUP; CADR @%; CONTRACT @dest unit; ASSERT_SOME;
+                      SWAP; CDR @%;
+                      UNPAIR @% @%; SWAP;
+                      NOW; ASSERT_CMPLT;
+                      UNIT; TRANSFER_TOKENS;
+                    };
+             }
+             {
+               DUP;
+               DIP
+                 {
+                   GET; ASSERT_SOME;
+                   DUP; CAAR @%; CONTRACT @from unit; ASSERT_SOME; SWAP; CDR;
+                   UNPAIR @% @%; SWAP;
+                   NOW; ASSERT_CMPGE;
+                   UNIT; TRANSFER_TOKENS; SWAP;
+                 };
+             };
+           NONE @none (pair (pair address address) (pair mutez timestamp));
+           SWAP; UPDATE @cleared_map; SWAP; DIP { PAIR; SWAP };
+           CONS; PAIR;
+         }
+     }

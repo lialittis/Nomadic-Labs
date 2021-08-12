@@ -1,0 +1,9 @@
+parameter nat;
+storage (list nat);
+code { DUP;
+       CAR;
+       DIP{CDR};
+       DUP;
+       DIP{CONS};
+       CONS;
+       NIL operation; PAIR}
